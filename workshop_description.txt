@@ -17,6 +17,14 @@ Compatibility:
 - Requires Build 42.15 or later
 - Localized in 12 languages: EN, DE, FR, ES, RU, PL, PT-BR, IT, TR, CN, KO, JP.
 
+Maintenance & Source:
+This mod is feature-complete for my use and no longer actively developed. Last tested against PZ build 42.18.
+
+PassThroughWindow is MIT-licensed and fully open source. Forks and improvements are welcome and encouraged. If a maintained successor appears, I'll link to it here.
+https://github.com/armakupub/PassThroughWindow
+
+Issues and PRs will be read but I can't promise response times. If the mod breaks in a future PZ version and I'm not going to fix it, I'll remove it from the Workshop rather than leave a broken version up.
+
 ---
 The screenshot uses Carry Visible Generators (https://steamcommunity.com/sharedfiles/filedetails/?id=3390487814) by Deon to make generators visible when held.
 More mods: Auto Fast Forward Walk To (https://steamcommunity.com/sharedfiles/filedetails/?id=3700497455)
