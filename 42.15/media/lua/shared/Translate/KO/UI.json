@@ -1,0 +1,6 @@
+{
+    "UI_PTW_PassThrough": "%1을(를) 창문으로 밀어넣기",
+    "UI_PTW_WindowClosed": "창문이 열려 있거나 깨져 있어야 합니다.",
+    "UI_PTW_OtherSideBlocked": "반대편이 막혀 있습니다.",
+    "UI_PTW_PushTooltip": "%1을(를) 창문 너머로 밀어넣습니다."
+}

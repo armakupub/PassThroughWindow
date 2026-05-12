@@ -1,0 +1,6 @@
+{
+    "UI_PTW_PassThrough": "Pass %1 through window",
+    "UI_PTW_WindowClosed": "The window must be open or broken.",
+    "UI_PTW_OtherSideBlocked": "The other side is blocked.",
+    "UI_PTW_PushTooltip": "Push the %1 through the window to the other side."
+}

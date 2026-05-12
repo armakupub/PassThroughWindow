@@ -1,0 +1,6 @@
+{
+    "UI_PTW_PassThrough": "将%1推过窗户",
+    "UI_PTW_WindowClosed": "窗户必须是打开的或破碎的。",
+    "UI_PTW_OtherSideBlocked": "另一侧被阻挡了。",
+    "UI_PTW_PushTooltip": "将%1推过窗户到另一侧。"
+}

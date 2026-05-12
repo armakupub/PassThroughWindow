@@ -1,0 +1,25 @@
+Pass Through Window
+
+Allows you to pass generators through open or broken windows.
+
+How it works:
+- Equip a generator
+- Right-click on an open or broken window
+- Select "Pass [Generatortype] through window"
+- The tile behind the window must be clear and walkable
+- Your character will push the item through to the other side
+
+Note: Generators produce deadly fumes indoors. This mod is designed to move them onto rooftops or balconies that are only accessible through a window.
+
+Currently supports generators. If you have suggestions for other items that would benefit from this mechanic, leave a comment!
+
+Compatibility:
+- Requires Build 42.15 or later
+- Localized in 12 languages: EN, DE, FR, ES, RU, PL, PT-BR, IT, TR, CN, KO, JP.
+
+---
+The screenshot uses Carry Visible Generators (https://steamcommunity.com/sharedfiles/filedetails/?id=3390487814) by Deon to make generators visible when held.
+More mods: Auto Fast Forward Walk To (https://steamcommunity.com/sharedfiles/filedetails/?id=3700497455)
+
+Workshop ID: 3698600535
+Mod ID: PassThroughWindow

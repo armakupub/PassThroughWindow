@@ -1,0 +1,6 @@
+{
+    "UI_PTW_PassThrough": "%1を窓から押し通す",
+    "UI_PTW_WindowClosed": "窓が開いているか壊れている必要があります。",
+    "UI_PTW_OtherSideBlocked": "反対側が塞がっています。",
+    "UI_PTW_PushTooltip": "%1を窓の向こう側に押し通します。"
+}

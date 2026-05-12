@@ -1,0 +1,6 @@
+{
+    "UI_PTW_PassThrough": "%1 pencereden geçir",
+    "UI_PTW_WindowClosed": "Pencere açık veya kırık olmalı.",
+    "UI_PTW_OtherSideBlocked": "Diğer taraf engellenmiş.",
+    "UI_PTW_PushTooltip": "%1 pencereden diğer tarafa it."
+}
