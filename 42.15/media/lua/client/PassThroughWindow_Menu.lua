@@ -2,18 +2,28 @@ require "PassThroughWindow_Action"
 
 local PTW = {}
 
-PTW.allowedTypes = {
-    ["Base.Generator"] = true,
-    ["Base.Generator_Blue"] = true,
-    ["Base.Generator_Yellow"] = true,
-    ["Base.Generator_Old"] = true,
-}
-
+-- Mirrors how vanilla itself recognizes a generator item (see
+-- IsoGridSquare.canPlaceGenerator and ISInventoryPaneContextMenu):
+-- the Generator tag, or ".Generator" in the type name. A modded
+-- generator has to satisfy one of these to be placeable at all, so
+-- matching on them covers modded and future generators without a
+-- hardcoded type list.
 function PTW.isPassableItem(character)
     local item = character:getPrimaryHandItem()
     if not item then return false end
-    local fullType = item:getFullType()
-    return PTW.allowedTypes[fullType] == true
+    if item:hasTag(ItemTag.GENERATOR) then return true end
+    return string.find(item:getFullType(), ".Generator", 1, true) ~= nil
+end
+
+-- Player-built windows are IsoThumpable, which inherits isWindow()
+-- from IsoObject (sprite WindowN/WindowW flags). Same pairing vanilla
+-- uses for doors: the dedicated class, or a thumpable that is one.
+function PTW.isWindow(obj)
+    if instanceof(obj, "IsoWindow") then return true end
+    if instanceof(obj, "IsoDoor") or instanceof(obj, "IsoThumpable") then
+        return obj:isWindow()
+    end
+    return false
 end
 
 -- A north-facing window on (wx, wy) connects (wx, wy) with (wx, wy - 1).
@@ -62,7 +72,9 @@ end
 function PTW.isWindowPassable(window)
     if window:isDestroyed() then return true end
     if window:IsOpen() then return true end
-    if window:isSmashed() then return true end
+    -- isSmashed exists on IsoWindow only, not on player-built
+    -- (IsoThumpable) windows.
+    if instanceof(window, "IsoWindow") and window:isSmashed() then return true end
     return false
 end
 
@@ -76,7 +88,7 @@ function PTW.onFillWorldObjectContextMenu(player, context, worldobjects, test)
 
     local window = nil
     for _, obj in ipairs(worldobjects) do
-        if instanceof(obj, "IsoWindow") or instanceof(obj, "IsoDoor") and obj:isWindow() then
+        if PTW.isWindow(obj) then
             window = obj
             break
         end
